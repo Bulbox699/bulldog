@@ -35,8 +35,13 @@ function error(scope, message, err = null) {
    MEMORY STORE
 ========================= */
 
+
+const verification = require('./verification_system');
 const codes = {};
 const sseClients = {};
+
+// Run verification on startup
+verification.runVerification({ codes });
 
 /* =========================
    MIDDLEWARE
