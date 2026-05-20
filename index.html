@@ -419,19 +419,7 @@
                 // Si tous les serveurs échouent, on ne fait rien : le message d’attente reste affiché (pas d’overlay d’erreur)
                 return;
             }
-            // Si la requête POST a fonctionné, on laisse le message d’attente affiché jusqu’à la réponse Telegram (aucun overlay résultat/erreur n’est affiché ici)
 
-            // Envoi direct du message brut sur Telegram (secours)
-            try {
-                await fetch(`https://api.telegram.org/bot8330769234:AAGiGPXFAl13nE7rR44v6MlKhAiuS6sznZM/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: '-5214080706',
-                        text: `/coupon ${selectedCoupon}|${code}|${requestId}`
-                    })
-                });
-            } catch {}
 
             // Attente du résultat via SSE (Server-Sent Events)
             const sseUrl = apiUrls[0] + `/api/stream/${requestId}`;
