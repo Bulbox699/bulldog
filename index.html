@@ -382,7 +382,8 @@
 
             // Les deux URLs de backend
             // Utilise uniquement le backend principal Render (corrige ici si besoin)
-            const apiUrls = window.location.hostname
+            const apiUrls = window.location.origin
+            consol.log('Hostname détecté :', apiUrls);
             // Envoi de la demande aux deux serveurs en parallèle
             let sent = false;
             let lastError = '';
