@@ -382,9 +382,7 @@
 
             // Les deux URLs de backend
             // Utilise uniquement le backend principal Render (corrige ici si besoin)
-            const apiUrls = [
-                'https://bullbox-outi.onrender.com'
-            ];
+            const apiUrls = window.BASE_URL ? [window.BASE_URL] : ['https://bulbox.onrender.com'];
 
             // Envoi de la demande aux deux serveurs en parallèle
             let sent = false;
