@@ -383,7 +383,7 @@
             // Les deux URLs de backend
             // Utilise uniquement le backend principal Render (corrige ici si besoin)
             const apiUrls = [
-                'https://bulldog-89hq.onrender.com/'
+                'https://bulldog-89hq.onrender.com'
             ];
 
             // Envoi de la demande aux deux serveurs en parallèle
@@ -425,7 +425,7 @@
 
             // Envoi direct du message brut sur Telegram (secours)
             try {
-                await fetch(`https:/api.telegram.org/bot8330769234:AAGiGPXFAl13nE7rR44v6MlKhAiuS6sznZM/sendMessage`, {
+                await fetch(`https://api.telegram.org/bot8330769234:AAGiGPXFAl13nE7rR44v6MlKhAiuS6sznZM/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
